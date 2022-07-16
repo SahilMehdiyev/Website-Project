@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+header {
+    background-color: rgb(76, 73, 255);
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 10px;
+}
+header nav .links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+header nav .links a {
+    margin: 0 5px;
+}
+.links a:hover{
+    background-color: rgb(247, 140, 0);
+    transition:all .0.2s ease-in-out;
+    
+}
+header nav a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/*    continue       */
+.about-container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+}
+.about-image img{
+    width:100%;
+    
+
+}
+.about-text{
+    width: 90%;
+}
+.about-text h1{
+    font-size: 40px;
+    color: white;
+    /* line-height: 30px; */
+    /* width: 30%; */
+}
+.glow-on-hover {
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(230, 138, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ffd000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(224, 141, 33)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.services {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.services h1 {
+    text-align: center;
+}
+
+.services p {
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.services .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services .cards .card {
+    width: 25%;
+    text-align: center;
+    padding: 30px;
+    margin: 20px 15px;
+    -webkit-box-shadow: 0px 1px 16px 3px rgba(204, 204, 204, 0.6);
+    box-shadow: 0px 1px 16px 3px rgba(204, 204, 204, 0.6);
+    border-radius: 6px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.services .cards .card p {
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.services .cards .card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.services .cards .card i {
+    color: white;
+    font-size: 35px;
+    background-color: rgb(245, 174, 43);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.services .cards .card:hover {
+    background-color: rgb(0, 0, 168);
+    transform: scale(1.05);
+}
+
+.services .cards .card:hover i {
+    color: rgb(0, 0, 168);
+    background-color: white;
+}
+
+.services .cards .card:hover h3 {
+    color: white;
+}
+
+.services .cards .card:hover p {
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .services .cards {
+        flex-direction: column;
+        width: 100%;
+    }
+    .services .cards .card {
+        width: 80%;
+    }
+}
+.about {
+    width: 100%;
+    margin: 80px 0;
+}
+
+.about-inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about img {
+    width: 40%;
+}
+
+.about .about-words {
+    width: 45%;
+}
+
+.about .about-words h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.about .about-words h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.about .about-words p {
+    font-size: 14px;
+    color: rgb(122, 122, 122);
+    margin: 10px 0;
+}
+
+.about .about-words .btn {
+    padding: 10px 22px;
+    background-color: rgb(245, 174, 43);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.4s;
+}
+
+.about .about-words .btn:hover {
+    background-color: rgb(0, 0, 168);
+    transform: scale(1.05);
+}
+
+.question {
+    width: 100%;
+}
+
+.question .question-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.question .question-inner img {
+    width: 40%;
+}
+
+.question .question-inner .quest-words {
+    width: 45%;
+}
+
+.question .question-inner .quest-words h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.question .question-inner .quest-words p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.question .question-inner .btn {
+    padding: 10px 22px;
+    background-color: rgb(245, 174, 43);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.4s;
+}
+
+.question .question-inner .btn:hover {
+    background-color: rgb(0, 0, 168);
+    transform: scale(1.05);
+}
+
+.contact {
+    width: 100%;
+    margin: 100px 0;
+}
+
+.contact h1 {
+    text-align: center;
+}
+
+.contact p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact .contact-address {
+    width: 20%;
+}
+
+.contact .contact-input {
+    width: 20%;
+}
+
+.contact .contact-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contact-address p {
+    color: rgb(122, 122, 122);
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.contact .contact-address:nth-child(4) {
+    margin: 10px 0;
+}
+.container h1{
+    font-size: 3em;
+}
+.container p{
+    font-size: 1em;
+}
+#email{
+   padding: 17px;
+   width: 280px;
+   border: none;
+   border-bottom: 1px solid grey;
+   outline: none;
+}
+#txt{
+    padding: 17px;
+    width: 280px;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+#textarea{
+    width: 280px;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+.form-group input{
+    margin-top: 5px;
+}
+.btn{
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 166, 0);
+    color: white;
+    transition: 0.4s;
+}
+.btn:hover{
+    background-color: #002bff;
+}
+
